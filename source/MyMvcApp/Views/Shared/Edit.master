@@ -1,0 +1,33 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" MasterPageFile="~/Views/Shared/Site.master" %>
+<asp:Content ContentPlaceHolderID="Content" runat="server">
+    <form>
+        <asp:ContentPlaceHolder ID="Content" runat="server" />
+        <p>
+            <input type="submit" value="Save" class="submitButton" /><span id="message" class="success" style="display:none">Saved successfully!</span>
+        </p>
+    </form>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="Scripts" runat="server">
+<script src="<%: Url.Content("~/Scripts/jquery.validate.js")  %>" type="text/javascript"></script>
+<script type="text/javascript">
+    var validator = null;
+    
+    $(document).ready(function(){
+        validator = $("form").validate();
+
+        $(".submitButton").click(function(){
+            if (validator.form()){
+                
+                $("#message").show();
+                
+                setTimeout(function(){
+                    $("#message").hide();
+                }, 2000);
+            }
+            return false;
+        });
+    });
+</script>
+<asp:ContentPlaceHolder Id="Scripts" runat="server" />
+</asp:Content>
