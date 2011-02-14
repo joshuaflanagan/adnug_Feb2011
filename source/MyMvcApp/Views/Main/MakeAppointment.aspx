@@ -1,36 +1,36 @@
-<%@ Page Title="" Language="C#" Inherits="System.Web.Mvc.ViewPage<MyMvcApp.Models.Appointment>" MasterPageFile="~/Views/Shared/Edit.master" %>
+<%@ Page Title="" Language="C#" Inherits="System.Web.Mvc.ViewPage<MyMvcApp.Controllers.MakeAppointmentModel>" MasterPageFile="~/Views/Shared/Edit.master" %>
 <%@ Import Namespace="MyMvcApp" %>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="Content">
 <h2>Making an appointment</h2>
 
 <p>
-    <%: Html.LabelFor(x => x.Patient) %>
+    <%: Html.LabelFor(x => x.Appointment.Patient) %>
     <br />
-    <%: Html.InputFor(x => x.Patient)%>
+    <%: Html.InputFor(x => x.Appointment.Patient)%>
 </p>
 
 <p>
-    <%: Html.LabelFor(x => x.CoverageDate)%>
+    <%: Html.LabelFor(x => x.Appointment.CoverageDate)%>
     <br />
-    <%: Html.InputFor(x => x.CoverageDate)%>
+    <%: Html.InputFor(x => x.Appointment.CoverageDate)%>
 </p>
 
 <p>
-    <%: Html.LabelFor(x => x.Physician)%>
+    <%: Html.LabelFor(x => x.Appointment.Physician)%>
     <br />
-    <%: Html.InputFor(x => x.Physician)%>
+    <%: Html.InputFor(x => x.Appointment.Physician)%>
 </p>
 
 <p>
-    <%: Html.LabelFor(x => x.StartTime)%>
+    <%: Html.LabelFor(x => x.Appointment.StartTime)%>
     <br />
-    <%: Html.InputFor(x => x.StartTime)%>
+    <%: Html.InputFor(x => x.Appointment.StartTime)%>
 </p>
 
 <p>
-    <%: Html.LabelFor(x => x.EndTime)%>
+    <%: Html.LabelFor(x => x.Appointment.EndTime)%>
     <br />
-    <%: Html.InputFor(x => x.EndTime)%>
+    <%: Html.InputFor(x => x.Appointment.EndTime)%>
 </p>
 </asp:Content>
 <asp:Content runat="server" ID="Content1" ContentPlaceHolderID="Scripts"></asp:Content>

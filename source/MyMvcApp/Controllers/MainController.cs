@@ -12,12 +12,12 @@ namespace MyMvcApp.Controllers
 
         public ActionResult EditPatient()
         {
-            return View(new Patient());
+            return View(new EditPatientModel {Patient = new Patient()});
         }
 
         public ActionResult MakeAppointment()
         {
-            return View(new Appointment());
+            return View(new MakeAppointmentModel { Appointment = new Appointment() });
         }
 
         public ActionResult Help(string topic)
@@ -29,5 +29,15 @@ namespace MyMvcApp.Controllers
     public class HelpViewModel
     {
         public string Topic { get; set; }
+    }
+
+    public class EditPatientModel
+    {
+        public Patient Patient { get; set; }
+    }
+
+    public class MakeAppointmentModel
+    {
+        public Appointment Appointment { get; set; }
     }
 }

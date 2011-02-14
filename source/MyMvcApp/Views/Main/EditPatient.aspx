@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Edit.master" Inherits="System.Web.Mvc.ViewPage<MyMvcApp.Models.Patient>" %>
+<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Edit.master" Inherits="System.Web.Mvc.ViewPage<MyMvcApp.Controllers.EditPatientModel>" %>
 <%@ Import Namespace="MyMvcApp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Scripts" runat="server">
@@ -10,26 +10,26 @@
 <asp:Content ContentPlaceHolderID="Content" runat="server">
 <h2>Editing a patient</h2>
 <p>
-    <%: Html.LabelFor(x => x.Name) %>
+    <%: Html.LabelFor(x => x.Patient.Name) %>
     <br />
-    <%: Html.InputFor(x => x.Name)%>
+    <%: Html.InputFor(x => x.Patient.Name)%>
 </p>
 
 <p>
-    <%: Html.LabelFor(x => x.Birthday)%>
+    <%: Html.LabelFor(x => x.Patient.Birthday)%>
     <br />
-    <%: Html.InputFor(x => x.Birthday)%>
+    <%: Html.InputFor(x => x.Patient.Birthday)%>
 </p>
 
 <p>
-    <%: Html.LabelFor(x => x.Hometown)%>
+    <%: Html.LabelFor(x => x.Patient.Hometown)%>
     <br />
-    <%: Html.InputFor(x => x.Hometown)%>
+    <%: Html.InputFor(x => x.Patient.Hometown)%>
 </p>
 
 <p>
-    <%: Html.LabelFor(x => x.Anniversary)%>
+    <%: Html.LabelFor(x => x.Patient.Anniversary)%>
     <br />
-    <%: Html.InputFor(x => x.Anniversary)%>
+    <%: Html.InputFor(x => x.Patient.Anniversary)%>
 </p>
 </asp:Content>
