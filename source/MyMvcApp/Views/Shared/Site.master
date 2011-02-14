@@ -15,7 +15,7 @@
                     <li><%: Html.ActionLink("Home", "Index", "Main") %></li>
                     <li><%: Html.ActionLink("Edit Patient", "EditPatient", "Main")%></li>
                     <li><%: Html.ActionLink("Make Appointment", "MakeAppointment", "Main")%></li>
-                    <li><a href="#" id="siteHelpLink">Help</a></li>
+                    <li><a href="#" id="siteHelpLink" onclick="showHelp('Using MyApp');return false;" >Help</a></li>
                 </ul>
             </div>
         </asp:ContentPlaceHolder>
@@ -33,12 +33,7 @@
 <script src="<%: Url.Content("~/Scripts/timepicker.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/help.js") %>" type="text/javascript"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("#siteHelpLink").click(function(){
-            showHelp("Using MyApp");
-            return false;
-        });
-    });
+
 </script>
 <asp:ContentPlaceHolder id="Scripts" runat="server">
 </asp:ContentPlaceHolder>

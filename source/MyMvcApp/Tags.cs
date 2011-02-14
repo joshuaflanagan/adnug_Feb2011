@@ -41,4 +41,13 @@ namespace MyMvcApp
             }
         }
     }
+
+    public class HelpLinkTag : LinkTag
+    {
+        public HelpLinkTag(string topic) : base("?", "#")
+        {
+            AddClass("helpLink");
+            Attr("data-help-topic", topic);
+        }
+    }
 }
