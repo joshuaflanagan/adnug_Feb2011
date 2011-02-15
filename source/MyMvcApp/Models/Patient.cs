@@ -2,7 +2,7 @@ using System;
 
 namespace MyMvcApp.Models
 {
-    public class Patient
+    public class Patient : Entity
     {
         public string Name { get; set; }
         public string Hometown { get; set; }

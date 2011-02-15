@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\lib\fluent-nhibernate\FluentNHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlTags">
       <HintPath>..\..\lib\HtmlTags.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\lib\NHibernate\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
@@ -61,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="TagDemo.cs" />
