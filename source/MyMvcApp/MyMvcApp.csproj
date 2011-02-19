@@ -70,6 +70,7 @@
     <Compile Include="Database.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="HtmlConventions.cs" />
     <Compile Include="TagDemo.cs" />
     <Compile Include="Tags.cs" />
     <Compile Include="Global.asax.cs">

@@ -5,10 +5,6 @@ namespace MyMvcApp
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        public static void RegisterHtmlConventions()
-        {
-        }
-
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
@@ -31,7 +27,7 @@ namespace MyMvcApp
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
-            RegisterHtmlConventions();
+            HtmlConventions.Configure(Tags.Configured);
         }
     }
 }

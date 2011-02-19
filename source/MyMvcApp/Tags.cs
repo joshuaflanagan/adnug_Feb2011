@@ -10,9 +10,10 @@ namespace MyMvcApp
     {
         public static HtmlTag InputFor<TModel, TProperty>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TProperty>> expression)
         {
-            return new Tags().InputFor(expression);
+            return Tags.Configured.InputFor(expression);
         }
     }
+
 
     public partial class Tags
     {
@@ -33,7 +34,7 @@ namespace MyMvcApp
             return new HtmlTag("input").Attr("name", accessor.Name);
         }
 
-        private static void modifyTag(HtmlTag tag, Accessor accessor)
+        private void modifyTag(HtmlTag tag, Accessor accessor)
         {
             foreach (var convention in conventions.Where(x => x.Condition(accessor)))
             {
@@ -41,6 +42,10 @@ namespace MyMvcApp
             }
         }
     }
+
+
+
+
 
     public class HelpLinkTag : LinkTag
     {
