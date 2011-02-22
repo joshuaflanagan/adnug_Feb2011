@@ -14,7 +14,11 @@
     <br />
     <%: Html.InputFor(x => x.Patient.Name)%>
 </p>
-
+<p>
+    <%: Html.LabelFor(x => x.Patient.State) %>
+    <br />
+    <%: Html.InputFor(x => x.Patient.State)%>
+</p>
 <p>
     <%: Html.LabelFor(x => x.Patient.Birthday)%>
     <br />
